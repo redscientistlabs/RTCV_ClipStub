@@ -49,40 +49,11 @@ namespace RTCV_ClipPlayer
             RTCV.Common.Logging.StartLogging(VanguardCore.logPath);
             LibVLCInstance = new LibVLCSharp.Shared.LibVLC("--input-repeat=65535");
             Player = new VideoPlayer();
+            Player.Show();
+            this.ShowInTaskbar = false;
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            this.Hide();
         }
 
-        public static void OpenVLC()
-        {
-            if (LoadedMedia != null)
-            {
-                Player = new VideoPlayer();
-                Player.Show();
-                Player.GetVideoView().MediaPlayer.Media = LoadedMedia;
-                Player.GetVideoView().MediaPlayer.Play();
-            }
-        }
-
-        private void OnOpenVLC(object sender, EventArgs e)
-        {
-            OpenVLC();
-        }
-
-        private void bAddClip_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "video files|*.mp4;*.webm;*.mkv";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                ClipPath = ofd.FileName;
-                if (MessageBox.Show("Add this file?", "Clipussi!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    ClipStream = ofd.OpenFile();
-                    StreamInput = new LibVLCSharp.Shared.StreamMediaInput(ClipStream);
-                    LoadedMedia = new LibVLCSharp.Shared.Media(LibVLCInstance, StreamInput);
-                    VanguardCore.OpenRomFilename = ClipPath;
-                }
-            }
-        }
     }
 }
