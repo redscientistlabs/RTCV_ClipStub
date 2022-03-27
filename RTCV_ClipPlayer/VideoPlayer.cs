@@ -17,7 +17,6 @@ namespace RTCV_ClipPlayer
         public static Stream ClipStream;
         public static string ClipPath;
         public static LibVLCSharp.Shared.StreamMediaInput StreamInput;
-        public static LibVLCSharp.Shared.LibVLC LibVLCInstance;
         public static LibVLCSharp.Shared.Media LoadedMedia;
 
         public VideoPlayer()

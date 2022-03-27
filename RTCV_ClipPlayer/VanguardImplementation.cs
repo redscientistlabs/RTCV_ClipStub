@@ -112,10 +112,10 @@
                             SyncObjectSingleton.FormExecute(() =>
                             {
                                 VideoPlayer.ClipPath = (string)((NetCoreAdvancedMessage)e.message).objectValue;
-                                VideoPlayer.ClipStream = new FileStream(StubForm.ClipPath, FileMode.Open, FileAccess.Read);
-                                VideoPlayer.StreamInput = new LibVLCSharp.Shared.StreamMediaInput(StubForm.ClipStream);
-                                VideoPlayer.LoadedMedia = new LibVLCSharp.Shared.Media(StubForm.LibVLCInstance, StubForm.StreamInput);
-                                VanguardCore.OpenRomFilename = StubForm.ClipPath;
+                                VideoPlayer.ClipStream = new FileStream(VideoPlayer.ClipPath, FileMode.Open, FileAccess.Read);
+                                VideoPlayer.StreamInput = new LibVLCSharp.Shared.StreamMediaInput(VideoPlayer.ClipStream);
+                                VideoPlayer.LoadedMedia = new LibVLCSharp.Shared.Media(StubForm.LibVLCInstance, VideoPlayer.StreamInput);
+                                VanguardCore.OpenRomFilename = VideoPlayer.ClipPath;
                                 StubForm.Player.PlayVLC();
                             });
                         } break;

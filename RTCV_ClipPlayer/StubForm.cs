@@ -26,11 +26,7 @@ namespace RTCV_ClipPlayer
     public delegate void Open_VLC();
     public partial class StubForm : Form
     {
-        public static Stream ClipStream;
-        public static string ClipPath;
-        public static LibVLCSharp.Shared.StreamMediaInput StreamInput;
         public static LibVLCSharp.Shared.LibVLC LibVLCInstance;
-        public static LibVLCSharp.Shared.Media LoadedMedia;
         public static VideoPlayer Player;
         public StubForm()
         {
