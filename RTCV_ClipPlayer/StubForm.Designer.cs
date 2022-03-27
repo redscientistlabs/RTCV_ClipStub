@@ -28,71 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnSideBar = new System.Windows.Forms.Panel();
             this.pnTarget = new System.Windows.Forms.Panel();
+            this.btnPause = new System.Windows.Forms.Button();
             this.bAddClip = new System.Windows.Forms.Button();
-            this.bOpenVLC = new System.Windows.Forms.Button();
+            this.videoView = new LibVLCSharp.WinForms.VideoView();
             this.pnTarget.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnSideBar
-            // 
-            this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnSideBar.Location = new System.Drawing.Point(0, 0);
-            this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(118, 450);
-            this.pnSideBar.TabIndex = 175;
-            this.pnSideBar.Tag = "color:dark3";
             // 
             // pnTarget
             // 
-            this.pnTarget.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnTarget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnTarget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.pnTarget.Controls.Add(this.btnPause);
             this.pnTarget.Controls.Add(this.bAddClip);
-            this.pnTarget.Controls.Add(this.bOpenVLC);
-            this.pnTarget.Location = new System.Drawing.Point(124, 27);
+            this.pnTarget.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTarget.Location = new System.Drawing.Point(0, 0);
             this.pnTarget.Name = "pnTarget";
-            this.pnTarget.Size = new System.Drawing.Size(660, 136);
+            this.pnTarget.Size = new System.Drawing.Size(800, 31);
             this.pnTarget.TabIndex = 176;
-            this.pnTarget.Tag = "color:dark1";
+            this.pnTarget.Tag = "color:dark3";
+            // 
+            // btnPause
+            // 
+            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPause.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnPause.ForeColor = System.Drawing.Color.White;
+            this.btnPause.Location = new System.Drawing.Point(679, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(118, 23);
+            this.btnPause.TabIndex = 181;
+            this.btnPause.TabStop = false;
+            this.btnPause.Tag = "color:dark2";
+            this.btnPause.Text = "Play / Pause";
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // bAddClip
             // 
-            this.bAddClip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bAddClip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.bAddClip.FlatAppearance.BorderSize = 0;
             this.bAddClip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAddClip.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.bAddClip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.bAddClip.Location = new System.Drawing.Point(554, 32);
+            this.bAddClip.ForeColor = System.Drawing.Color.White;
+            this.bAddClip.Location = new System.Drawing.Point(4, 3);
             this.bAddClip.Name = "bAddClip";
-            this.bAddClip.Size = new System.Drawing.Size(103, 23);
+            this.bAddClip.Size = new System.Drawing.Size(92, 23);
             this.bAddClip.TabIndex = 180;
             this.bAddClip.TabStop = false;
             this.bAddClip.Tag = "color:dark2";
-            this.bAddClip.Text = "Add Clip";
+            this.bAddClip.Text = "Open Video";
             this.bAddClip.UseVisualStyleBackColor = false;
             this.bAddClip.Click += new System.EventHandler(this.bAddClip_Click);
             // 
-            // bOpenVLC
+            // videoView
             // 
-            this.bOpenVLC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bOpenVLC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.bOpenVLC.FlatAppearance.BorderSize = 0;
-            this.bOpenVLC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bOpenVLC.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.bOpenVLC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.bOpenVLC.Location = new System.Drawing.Point(554, 3);
-            this.bOpenVLC.Name = "bOpenVLC";
-            this.bOpenVLC.Size = new System.Drawing.Size(103, 23);
-            this.bOpenVLC.TabIndex = 179;
-            this.bOpenVLC.TabStop = false;
-            this.bOpenVLC.Tag = "color:dark2";
-            this.bOpenVLC.Text = "Video Player";
-            this.bOpenVLC.UseVisualStyleBackColor = false;
-            this.bOpenVLC.Click += new System.EventHandler(this.OnOpenVLC);
+            this.videoView.BackColor = System.Drawing.Color.Black;
+            this.videoView.Location = new System.Drawing.Point(160, 111);
+            this.videoView.MediaPlayer = null;
+            this.videoView.Name = "videoView";
+            this.videoView.Size = new System.Drawing.Size(461, 240);
+            this.videoView.TabIndex = 177;
+            this.videoView.Text = "videoView";
             // 
             // StubForm
             // 
@@ -100,22 +99,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.videoView);
             this.Controls.Add(this.pnTarget);
-            this.Controls.Add(this.pnSideBar);
+            this.DoubleBuffered = true;
             this.Name = "StubForm";
-            this.Text = "Clipussi";
+            this.Text = "ClipPlayer";
             this.Load += new System.EventHandler(this.StubForm_Load);
             this.pnTarget.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.videoView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnSideBar;
         private System.Windows.Forms.Panel pnTarget;
         private System.Windows.Forms.Button bAddClip;
-        private System.Windows.Forms.Button bOpenVLC;
+        private System.Windows.Forms.Button btnPause;
+        public LibVLCSharp.WinForms.VideoView videoView;
     }
 }
 

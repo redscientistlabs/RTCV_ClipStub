@@ -112,11 +112,8 @@
                             SyncObjectSingleton.FormExecute(() =>
                             {
                                 StubForm.ClipPath = (string)((NetCoreAdvancedMessage)e.message).objectValue;
-                                StubForm.ClipStream = new FileStream(StubForm.ClipPath, FileMode.Open, FileAccess.Read);
-                                StubForm.StreamInput = new LibVLCSharp.Shared.StreamMediaInput(StubForm.ClipStream);
-                                StubForm.LoadedMedia = new LibVLCSharp.Shared.Media(StubForm.LibVLCInstance, StubForm.StreamInput);
                                 VanguardCore.OpenRomFilename = StubForm.ClipPath;
-                                StubForm.OpenVLC();
+                                StubForm.PlayOnVLC(StubForm.ClipPath);
                             });
                         } break;
                     case RTCV.NetCore.Commands.Remote.PreCorruptAction:
