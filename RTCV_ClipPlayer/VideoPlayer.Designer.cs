@@ -29,74 +29,89 @@
         private void InitializeComponent()
         {
             this.videoView = new LibVLCSharp.WinForms.VideoView();
-            this.bPause = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnOptions = new System.Windows.Forms.Panel();
             this.btnLoadVideo = new System.Windows.Forms.Button();
+            this.btnVideoToStockpile = new System.Windows.Forms.Button();
+            this.lbDrop = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // videoView
             // 
-            this.videoView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.videoView.BackColor = System.Drawing.Color.Black;
-            this.videoView.Location = new System.Drawing.Point(0, 39);
+            this.videoView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.videoView.Location = new System.Drawing.Point(0, 0);
             this.videoView.MediaPlayer = null;
             this.videoView.Name = "videoView";
-            this.videoView.Size = new System.Drawing.Size(784, 423);
+            this.videoView.Size = new System.Drawing.Size(784, 461);
             this.videoView.TabIndex = 0;
             this.videoView.Text = "videoView1";
             this.videoView.Click += new System.EventHandler(this.videoView_Click);
             // 
-            // bPause
+            // pnOptions
             // 
-            this.bPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bPause.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.bPause.FlatAppearance.BorderSize = 0;
-            this.bPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bPause.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.bPause.ForeColor = System.Drawing.Color.White;
-            this.bPause.Location = new System.Drawing.Point(663, 6);
-            this.bPause.Name = "bPause";
-            this.bPause.Size = new System.Drawing.Size(116, 27);
-            this.bPause.TabIndex = 181;
-            this.bPause.TabStop = false;
-            this.bPause.Tag = "color:dark2";
-            this.bPause.Text = "Play/Pause";
-            this.bPause.UseVisualStyleBackColor = false;
-            this.bPause.Click += new System.EventHandler(this.bPause_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.panel1.Controls.Add(this.btnLoadVideo);
-            this.panel1.Controls.Add(this.bPause);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 39);
-            this.panel1.TabIndex = 182;
-            this.panel1.Tag = "color:dark3";
+            this.pnOptions.AllowDrop = true;
+            this.pnOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.pnOptions.Controls.Add(this.lbDrop);
+            this.pnOptions.Controls.Add(this.btnVideoToStockpile);
+            this.pnOptions.Controls.Add(this.btnLoadVideo);
+            this.pnOptions.Location = new System.Drawing.Point(17, 17);
+            this.pnOptions.Name = "pnOptions";
+            this.pnOptions.Size = new System.Drawing.Size(205, 212);
+            this.pnOptions.TabIndex = 182;
+            this.pnOptions.Tag = "color:dark3";
+            this.pnOptions.Visible = false;
+            this.pnOptions.DragDrop += new System.Windows.Forms.DragEventHandler(this.label1_DragDrop);
             // 
             // btnLoadVideo
             // 
-            this.btnLoadVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoadVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnLoadVideo.FlatAppearance.BorderSize = 0;
             this.btnLoadVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadVideo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLoadVideo.ForeColor = System.Drawing.Color.White;
-            this.btnLoadVideo.Location = new System.Drawing.Point(5, 6);
+            this.btnLoadVideo.Location = new System.Drawing.Point(9, 11);
             this.btnLoadVideo.Name = "btnLoadVideo";
-            this.btnLoadVideo.Size = new System.Drawing.Size(116, 27);
+            this.btnLoadVideo.Size = new System.Drawing.Size(185, 27);
             this.btnLoadVideo.TabIndex = 182;
             this.btnLoadVideo.TabStop = false;
             this.btnLoadVideo.Tag = "color:dark2";
-            this.btnLoadVideo.Text = "Load Video";
+            this.btnLoadVideo.Text = "Load Video to Player";
             this.btnLoadVideo.UseVisualStyleBackColor = false;
             this.btnLoadVideo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnVideoToStockpile
+            // 
+            this.btnVideoToStockpile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnVideoToStockpile.FlatAppearance.BorderSize = 0;
+            this.btnVideoToStockpile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVideoToStockpile.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnVideoToStockpile.ForeColor = System.Drawing.Color.White;
+            this.btnVideoToStockpile.Location = new System.Drawing.Point(9, 49);
+            this.btnVideoToStockpile.Name = "btnVideoToStockpile";
+            this.btnVideoToStockpile.Size = new System.Drawing.Size(185, 27);
+            this.btnVideoToStockpile.TabIndex = 183;
+            this.btnVideoToStockpile.TabStop = false;
+            this.btnVideoToStockpile.Tag = "color:dark2";
+            this.btnVideoToStockpile.Text = "Load Video to Stockpile";
+            this.btnVideoToStockpile.UseVisualStyleBackColor = false;
+            this.btnVideoToStockpile.Click += new System.EventHandler(this.btnVideoToStockpile_Click);
+            // 
+            // lbDrop
+            // 
+            this.lbDrop.AllowDrop = true;
+            this.lbDrop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.lbDrop.ForeColor = System.Drawing.Color.White;
+            this.lbDrop.Location = new System.Drawing.Point(45, 88);
+            this.lbDrop.Name = "lbDrop";
+            this.lbDrop.Size = new System.Drawing.Size(115, 110);
+            this.lbDrop.TabIndex = 183;
+            this.lbDrop.Text = "Drag and drop to batch import to stockpile";
+            this.lbDrop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDrop.DragDrop += new System.Windows.Forms.DragEventHandler(this.label1_DragDrop);
+            this.lbDrop.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbDrop_DragEnter);
+            this.lbDrop.DragOver += new System.Windows.Forms.DragEventHandler(this.label1_DragOver);
             // 
             // VideoPlayer
             // 
@@ -104,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnOptions);
             this.Controls.Add(this.videoView);
             this.Name = "VideoPlayer";
             this.Text = "ClipPlayer";
@@ -116,7 +131,7 @@
             this.Enter += new System.EventHandler(this.VideoPlayer_OnEnter);
             this.Leave += new System.EventHandler(this.VideoPlayer_OnLeave);
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnOptions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -124,8 +139,9 @@
         #endregion
 
         private LibVLCSharp.WinForms.VideoView videoView;
-        private System.Windows.Forms.Button bPause;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnOptions;
         private System.Windows.Forms.Button btnLoadVideo;
+        private System.Windows.Forms.Label lbDrop;
+        private System.Windows.Forms.Button btnVideoToStockpile;
     }
 }
