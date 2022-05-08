@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoPlayer));
             this.videoView = new LibVLCSharp.WinForms.VideoView();
             this.pnOptions = new System.Windows.Forms.Panel();
             this.lbDrop = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.pnOptions);
             this.Controls.Add(this.videoView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VideoPlayer";
             this.Text = "ClipStub";
             this.Activated += new System.EventHandler(this.VideoPlayer_OnEnter);

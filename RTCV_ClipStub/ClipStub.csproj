@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ClipStub2022.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LibVLCSharp, Version=3.6.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Bizhawk50X-Vanguard\Real-Time Corruptor\BizHawk_RTC\packages\LibVLCSharp.3.6.6\lib\net471\LibVLCSharp.dll</HintPath>
@@ -168,6 +171,9 @@
       <Project>{463294bb-8210-4660-923f-b3b9f6aef306}</Project>
       <Name>Vanguard</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClipStub2022.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\Bizhawk50X-Vanguard\Real-Time Corruptor\BizHawk_RTC\packages\VideoLAN.LibVLC.Windows.3.0.17.4\build\VideoLAN.LibVLC.Windows.targets" Condition="Exists('..\..\Bizhawk50X-Vanguard\Real-Time Corruptor\BizHawk_RTC\packages\VideoLAN.LibVLC.Windows.3.0.17.4\build\VideoLAN.LibVLC.Windows.targets')" />
