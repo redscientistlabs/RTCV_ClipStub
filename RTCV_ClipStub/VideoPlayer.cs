@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RTCV_ClipPlayer
+namespace ClipStub
 {
     public partial class VideoPlayer : Form
     {

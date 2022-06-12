@@ -1,4 +1,4 @@
-﻿namespace RTCV_ClipPlayer
+﻿namespace ClipStub
 {
     using System;
     using System.IO;

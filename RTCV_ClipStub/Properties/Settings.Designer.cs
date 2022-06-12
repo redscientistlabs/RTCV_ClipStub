@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RTCV_ClipStub.Properties {
+namespace ClipStub.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

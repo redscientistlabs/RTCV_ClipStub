@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RTCV_ClipPlayer
+namespace ClipStub
 {
     using System;
     using System.Drawing;
